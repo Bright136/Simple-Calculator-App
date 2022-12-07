@@ -1,4 +1,4 @@
-<h1> Simple-Calculator-App <img src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/60/lg/35/pocket-calculator_1f5a9.png'>
+<h1> Simple-Calculator-App <img src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/60/lg/35/pocket-calculator_1f5a9.png' alt='calcimage'>
 </h1>
 
 [![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -56,7 +56,9 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
 
 
 ## Screenshot of the App
-![calcscreen](https://drive.google.com/uc?export=view&id=1q4WTu9sMPAXIwua8ZqKIXY4FZ7k-zecZ)
+<img src='https://drive.google.com/uc?export=view&id=1q4WTu9sMPAXIwua8ZqKIXY4FZ7k-zecZ' alt='calcscreen'>
+
+
 
 Limitation
 ==========
