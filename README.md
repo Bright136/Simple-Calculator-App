@@ -47,7 +47,7 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
 
 - Windows:
         
-        python -m virtualenv kivy_venv; kivy_venv\Scripts\activate; python -m pip install -q --upgrade pip; python -m pip install -qr requirements.txt  
+        python -m virtualenv kivy_venv; kivy_venv\Scripts\activate; python -m pip install -q --upgrade pip; python -m pip install -r requirements.txt  
 
 - Linux & MacOs:
         
