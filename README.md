@@ -22,6 +22,9 @@ A simple Calculator for general purposes.
 * Multiply
 * Subtract
 * Divide
+* Inverse
+* Squred
+* Square-root
 
 ## Built With
 
