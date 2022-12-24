@@ -59,7 +59,7 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
 
 
 ## Screenshot of the App
-<img src='https://drive.google.com/uc?export=view&id=1q4WTu9sMPAXIwua8ZqKIXY4FZ7k-zecZ' alt='calcscreen'>
+<img src='https://drive.google.com/uc?export=view&id=1f8GPLV6NFxoyTYEehOe65c_9l5SIkiUq' alt='calcscreen'>
 
 
 
