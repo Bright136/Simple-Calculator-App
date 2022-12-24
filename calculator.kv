@@ -6,11 +6,17 @@
             id: calc_input
             text: '0'
             halign: 'right'
-            font_size: 65
-            size_hint: (1, .15)
+            font_size: 30
+            size_hint: (1, .12)
+        TextInput:
+            id: calc_output
+            text: '0'
+            halign: 'right'
+            font_size: 50
+            size_hint: (1, .12)
         GridLayout:
             cols: 4
-            rows: 5
+            rows: 6
             # rows
 
             Button:
@@ -23,14 +29,38 @@
             Button:
                 size_hint: (.2, .2)
                 font_size: 32
-                text: 'C'
+                text: 'CE'
                 on_press: root.clear()
             Button:
                 id: clear
                 size_hint: (.2, .2)
                 font_size: 32
+                text: 'C'
+                on_press: root.clear()
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
                 text: u'\u00AB'
                 on_press: root.remove()
+
+                # rows
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: 'x' + u'-\u00B9'
+                on_press: root.inverse()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: 'x' + u'\u00B2'
+                on_press: root.squared()
+            Button:
+                id: clear
+                size_hint: (.2, .2)
+                font_size: 32
+                text: u'\u00B2' + u'\u221A' + 'x'
+                on_press: root.root_squared()
 
             Button:
                 size_hint: (.2, .2)
@@ -60,7 +90,7 @@
                 size_hint: (.2, .2)
                 font_size: 32
                 text: 'x'
-                on_press: root.math_sign('*')
+                on_press: root.math_sign('x')
 # rows
             Button:
                 size_hint: (.2, .2)

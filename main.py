@@ -10,8 +10,13 @@ Window.size = (500, 700)
 
 
 class MyLayout(Widget):
-    # create a function to clear the text input
+    # create a function to clear both text input and outputs
     def clear(self):
+        self.ids.calc_input.text = '0'
+        self.ids.calc_output.text = '0'
+
+    # create a function to clear text input
+    def reset(self):
         self.ids.calc_input.text = '0'
 
     # create a variable that contains the number when pressed
@@ -29,7 +34,7 @@ class MyLayout(Widget):
     # aad the math signs to the text string when clicked
     def math_sign(self, sign):
         prior = self.ids.calc_input.text
-        signs = ['+', '-', '*', '÷']
+        signs = ['+', '-', 'x', '÷']
         last = prior[-1]
         if last in signs:
             pass
@@ -39,7 +44,7 @@ class MyLayout(Widget):
     # The calculator should be able to accept decimals
     def dot(self):
         prior = self.ids.calc_input.text
-        num_list = re.split('\*|\+|÷|-', prior)
+        num_list = re.split('x|\+|÷|-', prior)
         if '.' not in num_list[-1]:
             self.ids.calc_input.text = f'{prior}.'
         else:
@@ -53,7 +58,32 @@ class MyLayout(Widget):
         except:
             self.ids.calc_input.text = 'Error'
 
+    def squared(self):
+        prior = self.ids.calc_input.text
+        try:
+            square = float(prior) ** 2
+            self.ids.calc_input.text = str(square)
+        except:
+            self.ids.calc_input.text = 'Error'
+
+    def root_squared(self):
+        prior = self.ids.calc_input.text
+        try:
+            square_root = float(prior) ** (1 / 2)
+            self.ids.calc_input.text = str(square_root)
+        except:
+            self.ids.calc_input.text = 'Error'
+
+    def inverse(self):
+        prior = self.ids.calc_input.text
+        try:
+            inverse = 1 / float(prior)
+            self.ids.calc_input.text = str(inverse)
+        except:
+            self.ids.calc_input.text = 'error'
+
     # create a function to delete input
+
     def remove(self):
         prior = self.ids.calc_input.text
         prior = prior[:-1]
@@ -71,12 +101,13 @@ class MyLayout(Widget):
     # Evaluate the input text
     def equals(self):
         prior = self.ids.calc_input.text
+        prior = prior.replace('x', '*')
         prior = prior.replace('÷', '/')
         try:
             answer = eval(prior)
-            self.ids.calc_input.text = str(answer)
+            self.ids.calc_output.text = str(answer)
         except:
-            self.ids.calc_input.text = 'Error'
+            self.ids.calc_output.text = 'Error'
 
 
 class CalculatorApp(App):
